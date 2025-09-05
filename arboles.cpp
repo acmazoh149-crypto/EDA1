@@ -34,12 +34,17 @@ Nodo* insertar(Nodo* raiz, int valor){
 void inorder(Nodo* raiz){
     if(raiz != nullptr){
         inorder(raiz->left);
-        cout<<raiz->dato<<" "<<endl;
+        cout<<raiz->dato<<" ";
         inorder(raiz->right);
     }
 }
-void preorder(Nodo* raiz){
-    
+void postorder(Nodo* raiz){
+    if(raiz != nullptr){
+        postorder(raiz->left);
+        postorder(raiz->right);
+        cout<<raiz->dato<<" ";
+
+    }
 }
 
 int main(){
